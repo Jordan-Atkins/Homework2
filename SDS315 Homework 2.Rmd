@@ -22,7 +22,7 @@ library(ggplot2)
 
 prof.gg <- ggplot(prof)
 
-prof.gg +  geom_histogram(aes(x=eval), col='black', fill='orange', bins=9) + 
+prof.gg +  geom_histogram(aes(x=eval), col='black', fill='orange') + 
   labs(title='Histogram of UT Course Evaluations', x='Evaluation Score (1.0-5.0)', y='Frequency') + 
   theme(legend.position='bottom') + 
   scale_fill_brewer(type='qual', palette=2) +labs(caption = 'This histogram for UT Course Evaluations shows that most students give their class a 4.3-4.5 rating')
@@ -46,7 +46,7 @@ prof.gg +
 ## Part C:
 
 ```{r echo=FALSE}
-prof.gg +  geom_histogram(aes(x=eval), col='black', fill='orange', bins=9) + 
+prof.gg +  geom_histogram(aes(x=eval), col='black', fill='orange') + 
   labs(title='Histogram of UT Course Evaluations by Professors Gender', x='Evaluation Score (1.0-5.0)', y='Frequency') + 
   theme(legend.position='bottom') + 
   scale_fill_brewer(type='qual', palette=2) + facet_wrap(~gender)+labs(caption = 'These histograms show that, on average, male proffesors score higher evaluation scores than their female collegues')
